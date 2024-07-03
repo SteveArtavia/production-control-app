@@ -10,8 +10,8 @@
 <body class="m-5">
     <header>
         <nav>
-            <a href="#index.html">HOME</a>
-            <a href="#index.html">PRODUCTION DAYS</a>
+            <a href="index.html">HOME</a>
+            <a href="production.html">PRODUCTION DAYS</a>
         </nav>
         <h1>Production Tracking App</h1>
     </header>
@@ -23,7 +23,9 @@
             <h3 id="currentCases">Current cases:</h3>
         </div>
 
-        <div id="progressBar"></div>
+        <div id="progress-container">
+            <div id="progressBar" style="width: 0%;"></div>
+        </div>
     </div>
 
     <div class="container">
@@ -37,6 +39,7 @@
         <div class="card">
             <div class="card-body">
                 <button id="clearDay">Clear</button>
+                <button id="saveCases">Save Cases</button>
                 <ul id="cases-list"></ul>
             </div>
         </div>

@@ -1,3 +1,12 @@
-body{
-    
+#progressBar{
+    height: 20px;
+    background-color: #4CAF50;
+    text-align: center;
+    line-height: 20px;
+    color: white;
+    border-radius: 4px;
+    transition: width 0.3s ease;
+}
+#progress-container{
+    border: 1px solid black;
 }
