@@ -14,9 +14,7 @@ header{
 }
 h1{
     font-size: 40px !important;
-}
-h1 strong{
-    font-weight: bolder !important;
+    font-weight:200;
 }
 nav{
     display: flex;
