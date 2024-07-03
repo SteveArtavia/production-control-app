@@ -10,17 +10,19 @@ body{
 }
 header{
     padding: 2em;
+    padding-top: 0 !important;
 }
 h1{
     font-size: 1em !important;
 }
 nav{
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
 }
 nav a{
     text-decoration: none;
     color: black;
+    font-weight: bold;
 }
 #progress h3{
     font-weight: bold;
@@ -37,6 +39,7 @@ nav a{
 #progress-container{
     border: 1px solid #dddddd;
     border-radius: 4em;
+    box-shadow: 0 0 10px 0 #efefef;
 }
 
 #caseInput{
@@ -44,6 +47,9 @@ nav a{
     width: 100%;
     max-width: 20em;
     margin: 20px 0;
+    border-radius: 10px;
+    border: 1px solid #dddddd;
+    box-shadow: 0 0 10px 0 #efefef;
 }
 button{
     border: none;
@@ -54,4 +60,22 @@ button{
     width: 100%;
     max-width: 20em;
     margin: 0 20px;
+}
+
+#cases-list{
+    margin-top: 40px;
+    border-top: 1px solid #efefef;
+    padding-top: 20px;
+}
+#cases-list li{
+    list-style-type: none;
+    margin: 10px;
+}
+.card{
+    box-shadow: 0 0 10px 0 #efefef;
+    border: 1px solid #efefef !important;
+}
+#cases-container button{
+    margin-top: 10px;
+    text-align: center;
 }
