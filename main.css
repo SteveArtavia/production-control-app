@@ -1,12 +1,57 @@
+:root{
+    --backgroundColor:rgb(255, 255, 255);
+    --secondColor: #000000;
+}
+
+body{
+    background-color: var(--backgroundColor) !important;
+    color: rgb(11, 11, 12) !important;
+    font-family: 'SF Pro Text', 'Helvetica Neue', sans-serif !important;
+}
+header{
+    padding: 2em;
+}
+h1{
+    font-size: 1em !important;
+}
+nav{
+    display: flex;
+    justify-content: space-around;
+}
+nav a{
+    text-decoration: none;
+    color: black;
+}
+#progress h3{
+    font-weight: bold;
+    font-size: 1em;
+}
 #progressBar{
-    height: 20px;
-    background-color: #4CAF50;
-    text-align: center;
-    line-height: 20px;
+    height: 30px;
+    background: linear-gradient(135deg, #b967ff, #ffb6cc);
     color: white;
     border-radius: 4px;
     transition: width 0.3s ease;
+    border-radius: 4em;
 }
 #progress-container{
-    border: 1px solid black;
+    border: 1px solid #dddddd;
+    border-radius: 4em;
+}
+
+#caseInput{
+    padding: 10px 30px;
+    width: 100%;
+    max-width: 20em;
+    margin: 20px 0;
+}
+button{
+    border: none;
+    background-color: var(--secondColor) ;
+    color: var(--backgroundColor);
+    padding: 1em 1.5em;
+    border-radius: 10px !important;
+    width: 100%;
+    max-width: 20em;
+    margin: 0 20px;
 }

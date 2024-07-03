@@ -25,7 +25,6 @@ function updateProgressBar(){
     const percentage = (casesNumber / goal) * 100;
     const progressBar = document.getElementById('progressBar');
     progressBar.style.width = `${percentage}%`;
-    progressBar.textContent = `${Math.round(percentage)}%`;
 }
 
 function addCase(){
