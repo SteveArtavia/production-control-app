@@ -44,7 +44,9 @@ nav a{
     border-radius: 4em;
     box-shadow: 0 0 10px 0 #efefef;
 }
-
+#input-container{
+    text-align: center;
+}
 #caseInput{
     padding: 1em 1.5em;
     width: 100%;
@@ -80,5 +82,8 @@ button{
 }
 #cases-container button{
     margin-top: 10px;
+    text-align: center;
+}
+#buttons{
     text-align: center;
 }
