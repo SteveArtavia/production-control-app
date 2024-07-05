@@ -108,7 +108,7 @@ h1 strong{
     flex-direction: column;
 }
 #caseInput{
-    padding: 1em 3em;
+    padding: 25px 3em;
     width: 100%;
     max-width: 20em;
     margin: 20px 0;
@@ -118,17 +118,20 @@ h1 strong{
 }
 #enterCase{
     border: none;
-    background-color: var(--secondColor) ;
+    background-color: var(--secondColor);
     color: var(--backgroundColor);
-    padding: 1em 1.5em;
+    padding: 25px;
     border-radius: 20em !important;
     width: 100%;
     max-width: 20em;
     margin: 0 20px;
     box-shadow: 0 0 10px 0 #efefef;
 }
-button:active{
-    background-color: #292929;
+#enterCase:hover{
+    background-color: #2e2e2e;
+}
+#enterCase:active{
+    background-color: #4b4b4b;
 }
 
 .card{
@@ -153,9 +156,10 @@ button:active{
     text-align: center;
 }
 #divider-line{
-    background-color: var(--backgroundColor);
-    height: 1px;
+    background-color: #3b3b3b;
+    height: 5px;
     margin: 10px 100px;
+    border-radius: 20em;
 }
 
 #cases-list{
@@ -167,4 +171,14 @@ button:active{
     margin: 10px;
     color: white;
     text-align: center;
+}
+#clearDay{
+    width: 20em;
+    padding: 25px !important;
+}
+#clearDay:hover{
+    background-color: #efefef;
+}
+#clearDay:active{
+    background-color: #dbdbdb;
 }
