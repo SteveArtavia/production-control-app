@@ -108,21 +108,28 @@ h1 strong{
     flex-direction: column;
 }
 #caseInput{
-    padding: 25px 3em;
-    width: 100%;
+    padding: 20px 3em;
+    width: 15em;
     max-width: 20em;
     margin: 20px 0;
     border-radius: 20em;
     border: 1px solid #efefef;
     box-shadow: 0 0 10px 0 #efefef;
+    text-align: center;
+}
+#caseInput::placeholder{
+    color: #d6d6d6;
+}
+#caseInput:focus::placeholder{
+    opacity: 10%;
 }
 #enterCase{
     border: none;
     background-color: var(--secondColor);
     color: var(--backgroundColor);
-    padding: 25px;
+    padding: 20px;
     border-radius: 20em !important;
-    width: 100%;
+    width: 15em;
     max-width: 20em;
     margin: 0 20px;
     box-shadow: 0 0 10px 0 #efefef;
@@ -172,8 +179,8 @@ h1 strong{
     text-align: center;
 }
 #clearDay{
-    width: 20em;
-    padding: 25px !important;
+    width: 15em;
+    padding: 20px !important;
 }
 #clearDay:hover{
     background-color: #efefef;
