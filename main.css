@@ -9,8 +9,31 @@ body{
     font-family: 'SF Pro Text', 'Helvetica Neue', sans-serif !important;
 }
 header{
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    width: 100%;
     padding: 2em;
     padding-top: 0 !important;
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+}
+nav{
+    display: flex;
+}
+nav a{
+    background: linear-gradient(135deg, #b967ff, #b6faff);
+    padding: 25px;
+    border-radius: 50em;
+    box-shadow: 0 0 10px 0 #efefef;
+    color: white !important;
+}
+nav a:active{
+    opacity: 80%;
+}
+#production{
+    margin-top:20px;
 }
 h1{
     font-size: 40px !important;
@@ -19,71 +42,104 @@ h1{
 h1 strong{
     font-weight: 600 !important;
 }
-nav{
-    display: flex;
-    justify-content: space-between;
-}
-nav a{
-    text-decoration: none;
-    color: black;
-}
-#progress h3{
-    font-weight: bold;
+#goal{
     font-size: 1em;
+    color: #d4d4d4;
+}
+#progress{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 20px;
+}
+#currentCases{
+    padding: 20px 40px;
+    border: 1px solid #efefef;
+    border-radius: 20px;
+    box-shadow: inset 0 0 10px 0 #efefef;
+    color: linear-gradient(135deg, #b967ff, #b6faff);
+    font-size: 3em !important;
+    font-weight: bolder !important;
+    background: linear-gradient(135deg, #b967ff, #b6faff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-align: center;
 }
 #progressBar{
-    height: 30px;
-    background: linear-gradient(135deg, #b967ff, #ffb6cc);
+    height: 50px;
+    background: linear-gradient(135deg, #b967ff, #b6faff);
     color: white;
     border-radius: 4px;
     transition: width 0.3s ease;
     border-radius: 4em;
 }
 #progress-container{
-    border: 1px solid #dddddd;
+    background-color: #f5f5f5;
     border-radius: 4em;
-    box-shadow: 0 0 10px 0 #efefef;
+    overflow: hidden;
 }
 #input-container{
     text-align: center;
 }
 #caseInput{
-    padding: 1em 1.5em;
+    padding: 1em 3em;
     width: 100%;
     max-width: 20em;
     margin: 20px 0;
-    border-radius: 10px;
-    border: 1px solid #dddddd;
+    border-radius: 20em;
+    border: 1px solid #efefef;
     box-shadow: 0 0 10px 0 #efefef;
 }
-button{
+#enterCase{
     border: none;
     background-color: var(--secondColor) ;
     color: var(--backgroundColor);
     padding: 1em 1.5em;
-    border-radius: 10px !important;
+    border-radius: 20em !important;
     width: 100%;
     max-width: 20em;
     margin: 0 20px;
+    box-shadow: 0 0 10px 0 #efefef;
+}
+button:active{
+    background-color: #292929;
+}
+
+.card{
+    box-shadow: 0 0 10px 0 #efefef;
+    border: 1px solid #efefef !important;
+    border-radius: 20px !important;
+}
+#cases-container{
+    background-color: var(--secondColor);
+}
+#cases-container button{
+    background-color: white;
+    color: var(--secondColor);
+    max-width: 30%;
+    margin-top: 10px;
+    text-align: center;
+    border-radius: 20em !important;
+    padding: 1em 3em;
+}
+#buttons{
+    text-align: center;
+    padding-bottom: 40px;
+}
+#divider-line{
+    background-color: var(--backgroundColor);
+    height: 1px;
+    margin: 10px 100px;
 }
 
 #cases-list{
     margin-top: 40px;
-    border-top: 1px solid #efefef;
-    padding-top: 20px;
+    padding: 0;
 }
 #cases-list li{
     list-style-type: none;
     margin: 10px;
-}
-.card{
-    box-shadow: 0 0 10px 0 #efefef;
-    border: 1px solid #efefef !important;
-}
-#cases-container button{
-    margin-top: 10px;
-    text-align: center;
-}
-#buttons{
+    color: white;
     text-align: center;
 }

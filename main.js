@@ -16,7 +16,7 @@ window.addEventListener('load', () => {
         casesList.appendChild(newCase);
     });
 
-    currentCases.textContent = 'Current cases: ' + casesNumber;
+    currentCases.innerHTML = casesNumber;
 
     updateProgressBar();
 } )
@@ -34,7 +34,7 @@ function addCase(){
     casesList.appendChild(newCase);
 
     let caseSum = casesNumber += 1;
-    currentCases.textContent = 'Current cases: ' + caseSum;
+    currentCases.innerHTML = caseSum;
 
     // Guardar elemento en localStorage
     const storedCases = JSON.parse(localStorage.getItem('cases') || '[]');
@@ -67,7 +67,7 @@ function clearDay(){
         casesList.removeChild(casesList.firstChild)
     }
     casesNumber = 0;
-    currentCases.textContent = 'Current cases: ' + casesNumber;
+    currentCases.innerHTML = casesNumber;
     updateProgressBar();
 };
 const clearDayBtn = document.getElementById('clearDay');

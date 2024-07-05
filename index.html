@@ -7,41 +7,44 @@
     <link rel="stylesheet" href="main.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=SF+Pro+Text&display=swap">
+    <script src="https://kit.fontawesome.com/a9e6d69b36.js" crossorigin="anonymous"></script>
+
 </head>
 <body class="m-3">
-    <header class="mb-3">
-        <nav>
-            <a href="index.html">home</a>
-            <a href="production.html">production</a>
+    <header class="mb-3 container-fluid">
+        <nav class="p-3">
+            <a href="#"></i></a>
         </nav>
     </header>
 
-    <h1 class="mb-3">Production <br><strong>Tracking App</strong></h1>
-    <div id="progress-card" class="container card p-4">
-        <div id="progress">
-            <h3 id="goal">Goal: 70</h3>
-            <h3 id="currentCases">Current cases:</h3>
-        </div>
+    <div id="production" class="container">
+        <h1 id="pageTitle" class="mb-4">Production <br><strong>Tracking App</strong></h1>
+        <div id="progress-card" class="container card p-5">
+            <h3 id="goal" class="text-center">Goal:<span>70</span></h3>
+            <div id="progress" class="mb-3">
+                <h3 id="currentCases" class="text-center"></h3>
+            </div>
 
-        <div id="progress-container" class="my-3">
-            <div id="progressBar" style="width: 0%;"></div>
+            <div id="progress-container" class="my-3">
+                <div id="progressBar" style="width: 0%;"></div>
+            </div>
+            <div class="container" id="input-container">
+
+                <input type="text" placeholder="enter case id..." id="caseInput">
+                <button id="enterCase">Enter Case</button>
+        
+            </div>
         </div>
     </div>
 
-    <div class="container" id="input-container">
-
-        <input type="text" placeholder="enter case id..." id="caseInput"><br>
-        <button id="enterCase">Enter Case</button>
-
-    </div>
-
-    <div class="container mt-3">
+    <div class="container mt-5">
         <div id="cases-container" class="card">
             <div class="card-body">
-                <div id="buttons">
+                <div id="buttons" class="mt-4">
                     <button id="clearDay">Clear</button>
-                    <button id="saveCases">Save</button>
+                    <button id="saveCases" class="ms-4">Save</button>
                 </div>
+                <div id="divider-line"></div>
                 <ul id="cases-list"></ul>
             </div>
         </div>
