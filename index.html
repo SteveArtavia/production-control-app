@@ -19,6 +19,7 @@
 
     <div id="production" class="container">
         <h1 id="pageTitle" class="mb-4">Production <br><strong>Tracking App</strong></h1>
+
         <div id="progress-card" class="container card p-5">
             <h3 id="goal" class="text-center">Goal: <span>70</span></h3>
             <div id="progress" class="mb-3">
@@ -28,27 +29,30 @@
             <div id="progress-container" class="my-3">
                 <div id="progressBar" style="width: 0%;"></div>
             </div>
-            <div class="container" id="input-container">
 
+            <div class="container" id="input-container">
                 <input type="text" placeholder="enter case id..." id="caseInput">
-                <button id="enterCase">Enter Case</button>
-        
+                <button id="enterCase">Enter Case</button>   
             </div>
+
         </div>
     </div>
 
     <div class="container mt-5">
         <div id="cases-container" class="card">
             <div class="card-body">
-                <div id="buttons" class="mt-4">
+                <div id="buttons" class="my-3">
                     <button id="clearDay">Clear</button>
-                    <button id="saveCases" class="ms-4">Save</button>
                 </div>
-                <div id="divider-line"></div>
+                <div id="divider-line" class="mt-5"></div>
                 <ul id="cases-list"></ul>
             </div>
         </div>
     </div>
+
+    <footer class="text-center my-5">
+        <small>© Steve Artavia 2024. All rights reserved.</small>
+    </footer>
 
         <script src="main.js"></script>
 
