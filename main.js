@@ -36,6 +36,11 @@ function addCase(){
     let caseSum = casesNumber += 1;
     currentCases.innerHTML = caseSum;
 
+    const elemento = document.querySelector('.animacion');
+        elemento.classList.remove('animacion');
+        void elemento.offsetWidth;
+        elemento.classList.add('animacion');
+
     // Guardar elemento en localStorage
     const storedCases = JSON.parse(localStorage.getItem('cases') || '[]');
     storedCases.push(newCase.textContent);

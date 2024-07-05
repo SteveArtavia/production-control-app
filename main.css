@@ -2,6 +2,9 @@
     --backgroundColor:rgb(255, 255, 255);
     --secondColor: #000000;
 }
+html{
+    overflow-x: hidden;
+}
 
 body{
     background-color: var(--backgroundColor) !important;
@@ -48,23 +51,42 @@ h1 strong{
 }
 #progress{
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
     margin-top: 20px;
-}
-#currentCases{
-    padding: 20px 40px;
+    padding: 20px;
     border: 1px solid #efefef;
     border-radius: 20px;
     box-shadow: inset 0 0 10px 0 #efefef;
+    width: 9em;
+    max-width: 9em;
+}
+#currentCases{
     color: linear-gradient(135deg, #b967ff, #b6faff);
-    font-size: 3em !important;
+    font-size: 4em !important;
     font-weight: bolder !important;
     background: linear-gradient(135deg, #b967ff, #b6faff);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
     text-align: center;
+    margin: 0;
+    transition: transform 0.3s ease-in-out;
+}
+@keyframes animateElement {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+.animacion{
+    animation-name: animateElement;
+    animation-duration: 0.5s;
 }
 #progressBar{
     height: 50px;
