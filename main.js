@@ -6,6 +6,7 @@ let caseInput = document.getElementById('caseInput');
 const enterCaseBtn = document.getElementById('enterCase');
 let casesList = document.getElementById('cases-list');
 let currentCases = document.getElementById('currentCases');
+const removeCaseBtn = document.getElementById('removeCase');
 
 // Cargar casos de la lista al recargar la pagina
 window.addEventListener('load', () => {
@@ -30,6 +31,8 @@ function updateProgressBar(){
 function addCase(){
     const newCase = document.createElement('li')
     let caseText = caseInput.value.trim();
+    if(caseText === '') return;
+    
     newCase.textContent = caseText;
     casesList.appendChild(newCase);
 
@@ -60,11 +63,31 @@ caseInput.addEventListener('keypress', e => {
     }
 })
 
+function removeCase(){
+    
+    if (casesList.lastChild){
+        const lastCaseText = casesList.lastChild.textContent;
+        casesNumber -= 1;
+        currentCases.innerHTML = casesNumber;
+        casesList.removeChild(casesList.lastChild);
+
+
+        let storedCases = JSON.parse(localStorage.getItem('cases') || '[]');
+        storedCases = storedCases.filter(caseText => caseText !== lastCaseText);
+        localStorage.setItem('cases', JSON.stringify(storedCases));
+        localStorage.setItem('casesNumber', casesNumber);
+
+        updateProgressBar();
+    }
+}
+
+
+removeCaseBtn.addEventListener('click', removeCase);
 
 // Cada vez que se agregue un elemento a la lista de casos, se debe agregar una unidad en current cases
 
 
-// Debe haber un boton para limpiar la lista de casos del dia para el inicio de un nuevo dia de produccion, al eliminar la lista del dia, la lista debe guardarse en un dia especifico para llevar registro de la produccion de cada dia
+// Debe haber un boton para limpiar la lista de casos del dia para el inicio de un nuevo dia de produccion.
 
 function clearDay(){
     localStorage.clear();

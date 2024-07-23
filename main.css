@@ -178,6 +178,16 @@ h1 strong{
     color: white;
     text-align: center;
 }
+#removeCase{
+    width: 15em;
+    padding: 20px !important;
+}
+#removeCase:hover{
+    background-color: #efefef;
+}
+#removeCase:active{
+    background-color: #dbdbdb;
+}
 #clearDay{
     width: 15em;
     padding: 20px !important;
