@@ -20,7 +20,7 @@ window.addEventListener('load', () => {
     currentCases.innerHTML = casesNumber;
 
     updateProgressBar();
-} )
+})
 
 function updateProgressBar(){
     const percentage = (casesNumber / goal) * 100;
@@ -90,13 +90,16 @@ removeCaseBtn.addEventListener('click', removeCase);
 // Debe haber un boton para limpiar la lista de casos del dia para el inicio de un nuevo dia de produccion.
 
 function clearDay(){
-    localStorage.clear();
-    while (casesList.firstChild){
-        casesList.removeChild(casesList.firstChild)
+    let borrar = prompt("Estas seguro que quieres eliminar la produccion del dia?");
+    if(borrar === 'borrar'){
+        localStorage.clear();
+        while (casesList.firstChild){
+            casesList.removeChild(casesList.firstChild)
+        }
+        casesNumber = 0;
+        currentCases.innerHTML = casesNumber;
+        updateProgressBar();
     }
-    casesNumber = 0;
-    currentCases.innerHTML = casesNumber;
-    updateProgressBar();
 };
 const clearDayBtn = document.getElementById('clearDay');
 clearDayBtn.addEventListener('click', clearDay);
