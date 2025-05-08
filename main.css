@@ -195,8 +195,6 @@ h1 strong{
     background-color: rgb(114, 114, 114);
     color: var(--backgroundColor);
 }
-.cases__icon{
-}
 .cases__divider{
     background-color: #3b3b3b;
     height: 5px;
