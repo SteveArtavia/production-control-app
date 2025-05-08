@@ -1,47 +1,47 @@
 # ProduApp
 
-## Descripción
+## Description
 
-Esta es una aplicación web diseñada para rastrear la producción diaria de mi actual trabajo. Permite a los usuarios ingresar casos, registrar el progreso y generar un reporte de producción.
+This is a web application designed to track daily production for my current job. It allows users to enter cases, record progress, and generate a production report.
 
-## Características
+## Features
 
-* Registro de Casos: Los usuarios pueden ingresar IDs de casos individuales.
-* Visualización del Progreso: La aplicación muestra el número actual de casos ingresados y el progreso hacia una meta establecida, posiblemente con una barra de progreso.
-* Eliminación de Casos: Los usuarios pueden eliminar casos registrados.
-* Limpieza de la Jornada: La aplicación permite limpiar o reiniciar el registro de casos para un nuevo día de producción.
-* Generación de Reportes: Los usuarios pueden generar un reporte de producción diario en formato de archivo de texto y descargarlo.
-* Persistencia de Datos: La aplicación guarda los datos localmente (probablemente usando localStorage), por lo que la información no se pierde al recargar la página.
+* **Case Entry:** Users can enter individual case IDs.
+* **Progress Visualization:** The application displays the current number of cases entered and the progress towards a set goal, possibly with a progress bar.
+* **Case Removal:** Users can remove recorded cases.
+* **Shift Clearance:** The application allows clearing or resetting the case log for a new production day.
+* **Report Generation:** Users can generate a daily production report in a text file format and download it.
+* **Data Persistence:** The application saves data locally (likely using `localStorage`), so information is not lost when the page is reloaded.
 
-## Tecnologías Utilizadas
+## Technologies Used
 
 * HTML
 * CSS
 * JavaScript
 * Bootstrap
-* Librería de Iconos Font Awesome
-* Fuente Google Fonts (Inter)
+* Font Awesome Icon Library
+* Google Fonts (Inter)
 
-## Instalación
+## Installation
 
-1.  Clona este repositorio: git clone <URL del repositorio>
-2.  Navega al directorio del proyecto: cd nombre-del-proyecto
-3.  Abre el archivo index.html en tu navegador web.
+1.  Clone this repository: `git clone <URL del repositorio>`
+2.  Navigate to the project directory: `cd nombre-del-proyecto`
+3.  Open the `index.html` file in your web browser.
 
-## Uso
+## Usage
 
-1.  Página Principal: La página principal muestra el título de la aplicación, la meta de producción, el número actual de casos y una barra de progreso.
-2.  Ingreso de Casos:
-    * Hay un campo de entrada donde puedes ingresar un ID de caso.
-    * El botón "Enter Case" agrega el caso a la lista y actualiza el progreso.
-3.  Visualización de Casos:
-    * Los casos ingresados se muestran en una lista.
-    * El número total de casos se actualiza dinámicamente.
-4.  Eliminación de Casos: El botón "Remove Case" elimina el último caso ingresado.
-5.  Limpieza de la Jornada: El botón "Clear" elimina todos los casos del día actual. Pregunta de confirmación antes de eliminar.
-6.  Generación de Reportes: El botón "Generate Report" genera un reporte de producción diario en formato de archivo de texto y lo descarga.
+1.  **Main Page:** The main page displays the application title, the production goal, the current number of cases, and a progress bar.
+2.  **Case Entry:**
+    * There is an input field where you can enter a case ID.
+    * The "Enter Case" button adds the case to the list and updates the progress.
+3.  **Case Visualization:**
+    * Entered cases are displayed in a list.
+    * The total number of cases is updated dynamically.
+4.  **Case Removal:** The "Remove Case" button removes the last entered case.
+5.  **Shift Clearance:** The "Clear" button deletes all cases from the current day.  Confirmation is requested before deletion.
+6.  **Report Generation:** The "Generate Report" button generates a daily production report in a text file format and downloads it.
 
-## Estructura de Archivos
+## File Structure
 
     
     ├── index.html
@@ -50,7 +50,7 @@ Esta es una aplicación web diseñada para rastrear la producción diaria de mi 
     └── README.md
     
 
-## Créditos
+## Credits
 
 * Steve Artavia
-* Librerías y frameworks de terceros mencionados en la sección "Tecnologías Utilizadas".
+* Third-party libraries and frameworks mentioned in the "Technologies Used" section.
