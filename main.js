@@ -8,9 +8,11 @@ let casesList = document.getElementById('cases-list');
 let currentCases = document.getElementById('currentCases');
 const removeCaseBtn = document.getElementById('removeCase');
 
+const storedCases = JSON.parse(localStorage.getItem('cases') || '[]');
+
 // Cargar casos de la lista al recargar la pagina
 window.addEventListener('load', () => {
-    const storedCases = JSON.parse(localStorage.getItem('cases') || '[]');
+    
     storedCases.forEach(caseText => {
         const newCase = document.createElement('li');
         newCase.textContent = caseText;
@@ -104,4 +106,19 @@ function clearDay(){
 const clearDayBtn = document.getElementById('clearDay');
 clearDayBtn.addEventListener('click', clearDay);
 
+const generateReportButton = document.getElementById("generate-report");
 
+// GENERAR REPORTE DE PRODUCCION DIARIA
+generateReportButton.addEventListener("click", () => {
+    let date = new Date().toLocaleDateString();
+    const reportContent = `Production Report\nDate: ${date}\nGoal: ${goal}\nTotal Cases Completed: ${casesNumber}\nCases:\n${storedCases.join("\n")}`;
+    const blob = new Blob([reportContent], { type: "text/plain" });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement("a");
+    a.href = url;
+    a.download = `${date}.txt`;
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+    URL.revokeObjectURL(url);
+});

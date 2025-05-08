@@ -6,19 +6,19 @@
     <title>Production Tracker App</title>
     <link rel="stylesheet" href="main.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=SF+Pro+Text&display=swap">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/a9e6d69b36.js" crossorigin="anonymous"></script> 
 
 </head>
 <body class="m-3">
-    <header class="mb-3 container-fluid">
-        <nav class="p-3">
-            <a href="#"></i></a>
+    <header class="header mb-3 container-fluid">
+        <nav class="header__nav p-3">
+            <a class="header__link" href="#"><i class="header__icon fas fa-arrow-up"></i></a>
         </nav>
     </header>
 
     <div id="production" class="container">
-        <h1 id="pageTitle" class="mb-4 text-center">Production <strong>Tracking App</strong></h1>
+        <h1 id="pageTitle" class="mb-4 text-center">Produ<strong>App</strong></h1>
 
         <div id="progress-card" class="container card p-5">
             <h3 id="goal" class="text-center mb-0">Goal: <span>70</span></h3>
@@ -32,27 +32,29 @@
             </div>
 
             <div class="container mt-4" id="input-container">
-                <input type="text" placeholder="enter case id..." id="caseInput">
-                <button id="enterCase">Enter Case</button>   
+                <input type="text" placeholder="Type case id..." id="caseInput">
+                <button id="enterCase">Enter Case<i class="enterCase__icon fas fa-arrow-right-to-bracket"></i></button>   
             </div>
 
         </div>
+    </div>
+
+    <div class="cases__controls" id="buttons">
+        <button class="cases__button" id="removeCase"><i class="cases__icon fas fa-square-minus"></i>Remove Case</button><br>
+        <button class="cases__button" id="clearDay"><i class="cases__icon fas fa-trash"></i>Clear</button><br>
+        <button class="cases__button" id="generate-report"><i class="cases__icon fas fa-file"></i>generate report</button>
     </div>
 
     <div class="container mt-5">
-        <div id="cases-container" class="card">
-            <div class="card-body">
-                <div id="buttons" class="my-3">
-                    <button id="removeCase">Remove Case</button><br>
-                    <button id="clearDay">Clear</button>
-                </div>
-                <div id="divider-line" class="mt-5"></div>
-                <ul id="cases-list"></ul>
+        <div class="cases card" id="cases">
+            <div class="cases__body card-body">
+                <div class="cases__divider mt-5"></div>
+                <ul class="cases__list" id="cases-list"></ul>
             </div>
         </div>
     </div>
 
-    <footer class="text-center my-5">
+    <footer class="footer text-center my-5">
         <small>© Steve Artavia 2024. All rights reserved.</small>
     </footer>
 
