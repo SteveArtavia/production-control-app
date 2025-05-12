@@ -47,7 +47,7 @@ function addCase(){
         elemento.classList.add('animacion');
 
     // Guardar elemento en localStorage
-    const storedCases = JSON.parse(localStorage.getItem('cases') || '[]');
+    let storedCases = JSON.parse(localStorage.getItem('cases') || '[]');
     storedCases.push(newCase.textContent);
     localStorage.setItem('cases', JSON.stringify(storedCases));
     localStorage.setItem('casesNumber', casesNumber);
@@ -111,6 +111,7 @@ const generateReportButton = document.getElementById("generate-report");
 // GENERAR REPORTE DE PRODUCCION DIARIA
 generateReportButton.addEventListener("click", () => {
     let date = new Date().toLocaleDateString();
+    const storedCases = JSON.parse(localStorage.getItem('cases') || '[]');
     const reportContent = `Production Report\nDate: ${date}\nGoal: ${goal}\nTotal Cases Completed: ${casesNumber}\nCases:\n${storedCases.join("\n")}`;
     const blob = new Blob([reportContent], { type: "text/plain" });
     const url = URL.createObjectURL(blob);
